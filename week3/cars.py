@@ -87,11 +87,11 @@ def get_car_list(csv_filename):
                 car_list.append(Truck(row[1], row[3], row[5], row[4]))
 
             if(row[0] == 'spec_machine'):
-                if (len(row) < 7 or not isinstance(row[6], str) or len(row[6])
-                    == 0):
+                if (len(row) < 7 or not isinstance(row[6], str)
+                   or len(row[6]) == 0):
                     continue
-
                 car_list.append(SpecMachine(row[1], row[3], row[5], row[6]))
+
     return car_list
 
 
